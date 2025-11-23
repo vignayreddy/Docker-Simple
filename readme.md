@@ -1,7 +1,9 @@
 # Docker Commands 
 
 ## Build Image
+```bash
 docker build -t welcome-app .
+```
 
 ## Show Images
 docker images
