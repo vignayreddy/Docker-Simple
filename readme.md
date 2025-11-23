@@ -6,46 +6,66 @@ docker build -t welcome-app .
 ```
 
 ## Show Images
+```bash
 docker images
+```
 
 ## Run Container
+```bash
 docker run -p 5000:5000 welcome-app
+```
 
 ## Running Containers
+```bash
 docker ps
+```
 
 ------------------------------------------------------------
 
 # Deployment to Docker Hub
 
 ## Login
+```bash
 docker login
+```
 
 ## Remove Image by ID
+```bash
 docker image rm -f 878909e6d1a2
+```
 
 ## Build Image for Docker Hub
+```bash
 docker build -t vignay/welcome-app .
+```
 
 ## OR Tag Image
+```bash
 docker tag vignay/welcome-app vignay/welcome-app1
+```
 
 ## Push to Docker Hub
+```bash
 docker push vignay/welcome-app
+```
 
 ------------------------------------------------------------
 
 # Pull & Remove From Docker Hub
 
 ## Remove Local Image
+```bash
 docker image rm -f vignay/welcome-app:latest
+```
 
 ## Pull Image
+```bash
 docker pull vignay/welcome-app:latest
-
+```
 ## Run Pulled Image
+```bash
 docker run -d -p 5000:5000 vignay/welcome-app:latest
-
+```
 Example Container ID:
 a27db429131d2b226aa937979475d6466615726a355297305dbef42e0ca56f25
 
